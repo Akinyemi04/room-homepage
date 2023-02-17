@@ -58,7 +58,7 @@ const Home = () => {
                 }} ><MenuIcon/></span>
                 <span className='logo'>room</span>
                 <nav style={{display:css}}>
-                    <span className='hidden'onClick={()=>{
+                    <span style={{color:'rgb(138, 136, 132)'}} className='hidden'onClick={()=>{
                         dispatch(animate.changeCss('none'))
                     }}><ClearIcon/></span>
                     <span>home</span>
