@@ -3,8 +3,8 @@ import img1 from '../Components/images/desktop-image-hero-1.jpg'
 import img2 from '../Components/images/desktop-image-hero-2.jpg'
 import img3 from '../Components/images/desktop-image-hero-3.jpg'
 import imgs1 from '../Components/images/mobile-image-hero-1.jpg'
-import imgs2 from '../Components/images/mobile-image-hero-1.jpg'
-import imgs3 from '../Components/images/mobile-image-hero-1.jpg'
+import imgs2 from '../Components/images/mobile-image-hero-2.jpg'
+import imgs3 from '../Components/images/mobile-image-hero-3.jpg'
 const mainSlice = createSlice({
     name:"main",
     initialState:{
