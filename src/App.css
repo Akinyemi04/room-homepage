@@ -191,8 +191,6 @@
   }
   .home section img {
     width: 100vw;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
   .home section header .hidden {
     color: whitesmoke;
