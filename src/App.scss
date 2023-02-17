@@ -1,0 +1,222 @@
+*{
+  padding: 0 0;
+  margin:  0 0;
+  box-sizing:border-box;
+}
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  section{
+    position: relative;
+    width: 57vw;
+    height: 60vh;
+    padding: 5vh 5vw;
+    img{
+      position: absolute;
+      width:57vw;
+      height: 60vh;
+      top:0;
+      left: 0;
+      aspect-ratio: 3/2;
+    }
+    header{
+      position: relative;
+      z-index: 2;
+      .logo{
+        color: white;
+        font-weight: 600;
+        font-size: x-large;
+        letter-spacing: 4px;
+        margin-right: 5vw;
+      }
+      .hidden{
+        display: none;
+      }
+      nav{
+        display: inline-block;
+        span{
+          margin-right: 2vw;
+          font-weight: 500;
+          font-size: large;
+          position: relative;
+          color: white;
+          cursor: pointer;
+        }
+        span::after{
+          position: absolute;
+          border-top: .15em solid white;
+          border-radius: 1rem;
+          content: '';
+          right: 100%;
+          left: 0;
+          bottom: -.34em;
+        }
+        span:hover::after{
+          right: 40%;
+          left: 20%;
+  
+        }
+      }
+    }
+  }
+  aside{
+    width: 43vw;
+    height: 60vh;
+    position: relative;
+    background-color: white;
+    padding: 7vh 5vw 0 5vw; 
+    h1{
+      font-size: 39px;
+      font-weight: 700;
+      line-height: 45px;
+      margin-bottom: 2vh;
+    }
+    div{
+      color: rgb(133, 130, 130);
+      font-size: small;
+      line-height:19px;
+      margin-bottom: 2vh;
+    }
+    .east{
+      margin: 3vh 0;
+      span{
+        letter-spacing: 5px;
+        font-weight: 500;
+        margin-right: 1vw;
+      }
+      .corn{
+        position: relative;
+        top: 5px;
+      }
+    }
+    .float{
+      background-color: black;
+      text-align: start;
+      position: absolute;
+      bottom:0;
+      margin-bottom: 0;
+      left: 0;
+      height: 80px;
+      display: inline-flex;
+      justify-content: space-between;
+      cursor: pointer;
+      span{
+        display: block;
+        padding-top: 3vh;
+        background-color: black;
+        text-align: center;
+        width: 6.5vw;
+        height:80px;
+        transition: opacity 0.2s ease-in;
+        .MuiSvgIcon-root{
+          color: rgb(170, 166, 166);
+          font-weight: 200;
+          font-size: xx-large;
+        }
+      }
+      span:hover{
+        opacity: 0.67;
+        background-color: grey;
+      }
+    }
+
+  }
+  img{
+    height: 40vh;
+    width:30vw;
+    object-fit: cover;
+  }
+  .fourth{
+    width:40vw;
+    height: 40vh;
+    padding: 7vh 4.5vw;
+    h2{
+      letter-spacing: 4px;
+      font-size: larger;
+      font-weight: 700;
+      margin-bottom: 2vh;
+    }
+    main{
+      color: rgb(133, 130, 130);
+      font-size: small;
+      line-height:19px;
+    }
+  }
+}
+@media screen and (max-width:'1089px') {
+  .home{
+    aside{
+      padding: 5vh 3vw 0 3vw;
+      div{
+        margin-bottom: 1.67vh;
+      }
+      .east{
+        margin: 0;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width:'500px') {
+  .home{
+    flex-direction: column;
+    img{
+      width: 100vw;
+    }
+    aside,.fourth{
+      width: 100vw;
+      height: 50vh;
+      padding: 5vw 4vh;
+      .float{
+        top: -80px;
+        right: 0vw;
+        left: 73vw;
+        span{
+          width: 13.5vw;
+        }
+      }
+      h1{
+        font-size: 33px;
+      }
+      .east{
+        span{
+          letter-spacing: 8px;
+        }
+      }
+    }
+    .fourth{
+      height: 40vh;
+    }
+    section{
+      width: 100vw;
+      text-align: center;
+      padding: 4vh 5vw;
+      img{
+        width: 100vw;
+      }
+      header{
+
+        .hidden{
+          color: whitesmoke;
+          display: inline-block;
+          position: absolute;
+          left: 4vw;
+        }
+        nav{
+          display: none;
+          position: absolute;
+          left: -5vw;
+          top: -4vh;
+          height: 10vh;
+          width: 100vw;
+          background-color: white;
+          padding: 3vh 3vw;
+          transition: display 0.4s ease-in;
+          span{
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
