@@ -27,6 +27,9 @@ const Home = () => {
     const css = useSelector((val)=>{
         return val.data.css_style_nav
     })
+    const opacity = useSelector((val)=>{
+        return val.data.opacity
+    })
     const dispatch = useDispatch()
     useEffect(()=>{
         if(window.screen.availWidth > 500){
@@ -37,21 +40,29 @@ const Home = () => {
             dispatch(animate.set(mobile_array))
             dispatch(animate.changeCss('none'))
         }
-    },[])
+    },[desktop_array,dispatch,mobile_array])
     function left(){
         if (number > 0){
-            dispatch(animate.subtract())
+            dispatch(animate.changeOpacity(0))
+            setTimeout(()=>{
+                dispatch(animate.subtract())
+                dispatch(animate.changeOpacity(1))
+            },[250])
         }
     }
     function right(){
         if(number <2){
-            dispatch(animate.add())
+            dispatch(animate.changeOpacity(0))
+            setTimeout(()=>{
+                dispatch(animate.add())
+                dispatch(animate.changeOpacity(1))
+            },[250])
         }
     }
   return (
     <div className='home'>
         <section>
-            <img src={show_array[number]} alt="" />
+            <img style={{opacity:opacity}} src={show_array[number]} alt="" />
             <header>
                 <span className='hidden' onClick={()=>{
                     dispatch(animate.changeCss('inline-block'))
@@ -68,9 +79,9 @@ const Home = () => {
                 </nav> 
             </header>
         </section>
-        <aside>
-            <h1>{display_array[number].header}</h1>
-            <div>
+        <aside  >
+            <h1 style={{opacity:opacity}}>{display_array[number].header}</h1>
+            <div style={{opacity:opacity}}>
                 {display_array[number].content}
             </div>
             <p className='east'><span>SHOP NOW</span><EastIcon className ='corn'/></p>

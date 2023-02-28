@@ -13,6 +13,7 @@ const mainSlice = createSlice({
         number:0,
         display:[img1,img2,img3],
         css_style_nav:'none',
+        opacity:1,
         view_data:[{
             header:'Discover innovative ways to decorate',
             content:'We provide unmatched quality,comfort,and style for property owners across the country.Our experts combine form and function in bringing your vision to life.Create a room in your own style with our collection and make your property a reflection of you and what youy love.'
@@ -50,6 +51,12 @@ const mainSlice = createSlice({
             return{
                 ...state,
                 css_style_nav:action.payload
+            }
+        },
+        changeOpacity(state,action){
+            return{
+                ...state,
+                opacity:action.payload
             }
         }
     }

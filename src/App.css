@@ -21,6 +21,7 @@
   top: 0;
   left: 0;
   aspect-ratio: 3/2;
+  transition: opacity 0.5s ease;
 }
 .home section header {
   position: relative;
@@ -72,11 +73,13 @@
   font-weight: 700;
   line-height: 45px;
   margin-bottom: 2vh;
+  transition: opacity 0.5s ease;
 }
 .home aside div {
   color: rgb(133, 130, 130);
   font-size: small;
   line-height: 19px;
+  transition: opacity 0.5s ease;
   margin-bottom: 2vh;
 }
 .home aside .east {
